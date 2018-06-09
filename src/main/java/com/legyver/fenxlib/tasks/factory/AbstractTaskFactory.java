@@ -23,6 +23,10 @@ public class AbstractTaskFactory {
 		this.taskStateListenerConfig = taskStateListenerConfig;
 	}
 
+	public AbstractTaskFactory() {
+		this(new TaskStateListenerConfigOptions());
+	}
+
 	protected void bindStatus(NamedTask task) throws CoreException {
 		QueryableComponentRegistry registry = GuiUtil.getComponentRegistry();
 		LocationContext taskPanel = new LocationContextDecorator(new DefaultLocationContext(BorderPaneInitializationOptions.REGION_RIGHT));
