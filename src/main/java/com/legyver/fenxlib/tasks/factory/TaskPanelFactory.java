@@ -11,7 +11,7 @@ import com.legyver.fenxlib.factory.TitledPaneContentFactory;
 import com.legyver.fenxlib.factory.decorator.ButtonIconDecorator;
 import com.legyver.fenxlib.factory.decorator.ButtonTooltipDecorator;
 import com.legyver.fenxlib.factory.options.BorderPaneInitializationOptions;
-import com.legyver.fenxlib.factory.options.IconOptions;
+import com.legyver.fenxlib.factory.options.SimpleIconOptions;
 import com.legyver.fenxlib.factory.options.SizeOptions;
 import com.legyver.fenxlib.locator.LocationContext;
 import com.legyver.fenxlib.locator.query.ComponentQuery;
@@ -72,7 +72,7 @@ public class TaskPanelFactory implements TitledPaneContentFactory<AnchorPane> {
 			ListView tasks = tasksQuery.get();
 			tasks.getItems().clear();
 		};
-		ButtonTooltipDecorator clear = new ButtonTooltipDecorator("Clear tasks", new ButtonIconDecorator(clearTasks, new SvgIconFactory(new IconOptions("trash", "#999999", 15))));
+		ButtonTooltipDecorator clear = new ButtonTooltipDecorator("Clear tasks", new ButtonIconDecorator(clearTasks, new SvgIconFactory(new SimpleIconOptions("trash", "#999999", 15))));
 
 		return clear;
 	}
