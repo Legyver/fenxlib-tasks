@@ -28,6 +28,10 @@ public class AbstractTaskFactory {
 	}
 
 	protected void bindStatus(NamedTask task) throws CoreException {
+		bindStatus(task, false);
+	}
+
+	protected void bindStatus(NamedTask task, boolean clearTasks) throws CoreException {
 		QueryableComponentRegistry registry = GuiUtil.getComponentRegistry();
 		LocationContext taskPanel = new LocationContextDecorator(new DefaultLocationContext(BorderPaneInitializationOptions.REGION_RIGHT));
 		taskPanel.setName(TaskPanelFactory.TASKS_PANE_TITLE);
@@ -36,7 +40,9 @@ public class AbstractTaskFactory {
 				.inSubRegion(TaskPanelFactory.TASKS_PANE_TITLE)
 				.named(TaskPanelFactory.TASKS_LIST).execute();
 		ListView tasks = tasksQuery.get();
-
+		if (clearTasks) {
+			tasks.getItems().clear();
+		}
 		TaskViewFactory taskViewFactory = new TaskViewFactory(tasks, task, taskStateListenerConfig);
 		GridPane taskView = taskViewFactory.makeNode(taskPanel);
 		tasks.getItems().add(taskView);
