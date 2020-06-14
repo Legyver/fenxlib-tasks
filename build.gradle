@@ -21,16 +21,15 @@ repositories {
 }
 
 dependencies {
-	//exception
-	compile group: 'com.legyver', name: 'core', version: '1.0+'
-	//ui scaffolding
-	compile group: 'com.legyver', name: 'fenxlib', version: '1.0+'
-	//tasks
-	compile group: 'com.legyver', name: 'tuktukfx', version: '1.0+'
-	
-	//logging
-	compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    //exception
+    compile group: 'com.legyver', name: 'core', version: '1.0.0.0'
+    //ui scaffolding
+    compile group: 'com.legyver', name: 'fenxlib', version: '1.1.0.0'
+    //tasks
+    compile group: 'com.legyver', name: 'tuktukfx', version: '1.0.0.0'
 
+    //logging
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
 }
 
 publishing {
@@ -45,7 +44,7 @@ publishing {
     }
 }
 
-version = "1.0.0.0"
+version = "1.1.0.0"
 
 jar {
 
