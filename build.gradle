@@ -24,7 +24,7 @@ dependencies {
     //exception
     compile group: 'com.legyver', name: 'core', version: '1.0.0.0'
     //ui scaffolding
-    compile group: 'com.legyver', name: 'fenxlib', version: '1.1.0.0'
+    compile group: 'com.legyver', name: 'fenxlib', version: '1.1.1.0'
     //tasks
     compile group: 'com.legyver', name: 'tuktukfx', version: '1.0.0.0'
 
@@ -44,7 +44,7 @@ publishing {
     }
 }
 
-version = "1.1.0.0"
+version = "1.1.1.0"
 
 jar {
 
